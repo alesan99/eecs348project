@@ -1,0 +1,40 @@
+Meeting 1: LEEP2 @ 2320, Septermber 20th 5:00PM CST
+
+Present:
+Aidan A.
+Aidan B.
+Alejandro
+Joel
+Liam
+
+Not Present:
+Tyler
+
+Team name: Math Olympiads
+
+Roles (temp) - to be fixed at a later date: 
+Technical Lead: Aidan A. / Alejandro
+Product Manager: Aidan B.
+UI/UX: Joel / Liam
+Configuration Manager: Aidan B.
+Scrum Master: 
+QA Lead: Aidan A.
+
+
+Potential Final Roles:
+Product and SVM Manager: Aidan B.
+Design Lead: Joel
+Technical Lead: ____
+UI/UX: Liam
+QA Lead: Aidan A.
+Scrum Master: ____ 
+
+
+Assignments:
+Joel (1.1 - 1.4)
+Liam (1.5 - 3.3)
+Alejandro (4 - 4.3)
+Aidan B. (4.7 - 4.8)
+Aidan A. (4.5)
+
+3.3 needs to be completed as well.
