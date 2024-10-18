@@ -1,0 +1,27 @@
+Math Olympiads Meeting Notes #4
+October 18 5:00PM @ Online Meeting
+
+Members Present:
+Aidan Atwood
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Alejandro Sandoval
+Tyler Stuckey
+
+Primary Meeting Topic:
+Discuss current state of SRS, figure out what is left to be completed. 
+
+
+Goal Progress from prior meeting:
+SRS is 90% completed. Use case diagram has been outlined and needs to be written up.
+Research needs to be done before next week in figuring out what software tools and workflows we will be using
+in order to develop the application.
+
+
+Assignments and Goals:
+Ensure C++ is the thing we are using
+Finish up use case diagram and add to document
+Finish up section 3.3 
+
+Meeting concluded at 5:17
