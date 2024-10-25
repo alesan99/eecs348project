@@ -1,0 +1,28 @@
+Math Olympiads Meeting Notes #
+October 25 5:00PM @ LEEP2 2320
+
+Members Present:
+Aidan Atwood
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Alejandro Sandoval
+Tyler Stuckey
+
+Primary Meeting Topic:
+Discuss the requirements for completing the Software Architecture Design document.
+
+Goal Progress from prior meeting:
+N/a
+
+Assignments and Goals:
+Joel: Section 1
+Alejandro: Section 5
+Aidan A.: Section 8
+Liam: Section 6
+Aidan B.: Section 3, 4
+Tyler: Section 2, 7
+
+
+Meeting concluded at 
+5:25PM
