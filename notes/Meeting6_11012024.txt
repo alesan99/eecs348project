@@ -1,19 +1,22 @@
-Math Olympiads Meeting Notes #5
-October 25 5:00PM @ LEEP2 2320
+Math Olympiads Meeting Notes #6
+November 1 5:00PM @ Online
 
 Members Present:
 Aidan Atwood
 Aidan Bergeman
 Joel Harrison
 Liam Kinghouser
-Alejandro Sandoval
 Tyler Stuckey
 
+Members Absent:
+Alejandro Sandoval
+
+
 Primary Meeting Topic:
-Discuss the requirements for completing the Software Architecture Design document.
+Progress check on task assignments from the prior meeting.
 
 Goal Progress from prior meeting:
-N/a
+Basic research was conducted, design and documentation is now the primary focus.
 
 Assignments and Goals:
 Joel: Section 1
@@ -23,6 +26,4 @@ Liam: Section 6
 Aidan B.: Section 3, 4
 Tyler: Section 2, 7
 
-
-Meeting concluded at 
-5:25PM
+Meeting concluded at 5:15pm
