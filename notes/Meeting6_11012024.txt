@@ -1,0 +1,29 @@
+Math Olympiads Meeting Notes #6
+November 1 5:00PM @ Online
+
+Members Present:
+Aidan Atwood
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Tyler Stuckey
+
+Members Absent:
+Alejandro Sandoval
+
+
+Primary Meeting Topic:
+Progress check on task assignments from the prior meeting.
+
+Goal Progress from prior meeting:
+Basic research was conducted, design and documentation is now the primary focus.
+
+Assignments and Goals:
+Joel: Section 1
+Alejandro: Section 5
+Aidan A.: Section 8
+Liam: Section 6
+Aidan B.: Section 3, 4
+Tyler: Section 2, 7
+
+Meeting concluded at 5:15pm

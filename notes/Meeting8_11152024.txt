@@ -1,0 +1,40 @@
+Math Olympiads Meeting Notes #8
+November 15 5:00PM @ LEEP2 2320
+
+Members Present:
+Aidan Atwood
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Alejandro Sandoval
+Tyler Stuckey
+
+Members Absent:
+
+Primary Meeting Topic:
+Discuss goal 4
+
+Input/Intro State
+
+Evaluation State
+
+Results State - potential exception handler
+helpful error messages
+
+Input breakdown
+
+Two sets of arrays , numbers and operators passed to evaluation state
+
+Assignments and Goals:
+Establish basic class structure for the program.
+Create Contribution guide on github
+No on gui for now - can be decided later 
+Exceptions - Operators: Aidan B 
+Evaluator: Alejandro, Joel 
+Input: Aidan A, Liam
+Parser: Tyler 
+
+
+
+Meeting concluded at
+5:40PM 
