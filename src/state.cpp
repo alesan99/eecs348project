@@ -5,24 +5,24 @@
 #include "state.h"
 #include <iostream>
 
-State::State(const string& stateName) : stateName(stateName) {}
+State::State(const std::string& stateName) : stateName(stateName) {}
 
-void State::load(string arg) {
-	cout << "[Loading state \"" << stateName << "\"]" <<  endl;
+void State::load(std::string arg) {
+	std::cout << "[Loading state \"" << stateName << "\"]" <<  std::endl;
 }
 
-void State::input(string input) {}
+void State::input(std::string input) {}
 
 void State::leave() {
-	cout << "[Leaving state \"" << stateName << "\"]" <<  endl;
+	std::cout << "[Leaving state \"" << stateName << "\"]" <<  std::endl;
 }
 
 
-string State::getStateName() {
+std::string State::getStateName() {
 	return stateName;
 }
 
-void State::switchState(string stateName, string arg) {
+void State::switchState(std::string stateName, std::string arg) {
 	switchToState = stateName;
 	switchToStateWith = arg;
 }

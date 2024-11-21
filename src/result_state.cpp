@@ -3,20 +3,20 @@
 
 ResultState::ResultState() : State("result") {}
 
-void ResultState::load(string result) {
+void ResultState::load(std::string result) {
 	// Display result
-	cout << "Result: " << result << endl;
+	std::cout << "Result: " << result << std::endl;
 
 	// Prompt user
-	cout << "Do you want to input another expression? (Y/N):" << endl;
+	std::cout << "Do you want to input another expression? (Y/N):" << std::endl;
 }
 
-void ResultState::input(string input) {
+void ResultState::input(std::string input) {
 	// Decide what to do next
 	if (input == "Y") { // Input another expression
 		switchState("input");
 	} else if (input == "N") { // Exit program
-		cout << "Exiting program..." << endl;
+		std::cout << "Exiting program..." << std::endl;
 		exit(0);
 	}
 }

@@ -4,7 +4,7 @@
 StateHandler::StateHandler() : currentState(nullptr) {}
 
 // Set the current state
-void StateHandler::setState(string stateName, string arg) {
+void StateHandler::setState(std::string stateName, std::string arg) {
 	if (currentState) {
 		currentState->leave();
 	}
@@ -14,20 +14,20 @@ void StateHandler::setState(string stateName, string arg) {
 	} else if (stateName == resultState.getStateName()) {
 		currentState = &resultState;
 	} else {
-		throw invalid_argument("Unknown state: " + stateName);
+		throw std::invalid_argument("Unknown state: " + stateName);
 	}
 
 	currentState->load(arg);
 }
 
 // Handle the current state
-int StateHandler::input(string input) {
+int StateHandler::input(std::string input) {
 	if (currentState) {
 		currentState->input(input);
 
 		if (currentState->switchToState != "") {
-			string targetState = currentState->switchToState;
-			string targetStateWith = currentState->switchToStateWith;
+			std::string targetState = currentState->switchToState;
+			std::string targetStateWith = currentState->switchToStateWith;
 			currentState->switchToState = "";
 			currentState->switchToStateWith = "";
 			setState(targetState, targetStateWith);

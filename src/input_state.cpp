@@ -3,11 +3,11 @@
 
 InputState::InputState() : State("input") {}
 
-void InputState::load(string arg) {
-	cout << "Please input your expression:" << endl;
+void InputState::load(std::string arg) {
+	std::cout << "Please input your expression:" << std::endl;
 }
 
-void InputState::input(string input) {
+void InputState::input(std::string input) {
 	expression = input;
 
 	// TODO

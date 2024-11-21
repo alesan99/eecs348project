@@ -7,30 +7,28 @@
 
 #include <string>
 
-using namespace std;
-
 class State {
 private:
-	string stateName; // Name/id of the state
+	std::string stateName; // Name/id of the state
 
 public:
-	State(const string& stateName);
+	State(const std::string& stateName);
 	virtual ~State() {}
-	
+
 	// Load the state. Called when the state is entered.
-	virtual void load(string arg = "");
+	virtual void load(std::string arg = "");
 	// Handle user input. Called after the state is loaded and when the user inputs something.
-	virtual void input(string input) = 0;
+	virtual void input(std::string input) = 0;
 	// Leave the state. Called when the state is switched away from.
 	virtual void leave();
 
 	// Get the name/id of the state
-	string getStateName();
+	std::string getStateName();
 
 	// Switch to a different state
-	string switchToState;
-	string switchToStateWith;
-	void switchState(string stateName, string arg = "");
+	std::string switchToState;
+	std::string switchToStateWith;
+	void switchState(std::string stateName, std::string arg = "");
 };
 
 #endif // STATE_H

@@ -18,10 +18,10 @@ public:
 	StateHandler();
 
 	// Set the current state
-	void setState(string stateName, string arg = "");
+	void setState(std::string stateName, std::string arg = "");
 
 	// Handle user input in the current state
-	int input(string input);
+	int input(std::string input);
 };
 
 #endif // STATE_HANDLER_H
