@@ -1,8 +1,8 @@
 CC := g++
 CC_FLAGS := -g
 BUILD_TARGET := aee.out
-SOURCES := calculator.cpp
-HEADERS := state_handler.h state.h result_state.h input_state.h
+SOURCES := calculator.cpp state.cpp input_state.cpp result_state.cpp state_handler.cpp
+HEADERS := state.h input_state.h result_state.h state_handler.h
 OBJS=$(addprefix obj/,$(subst .cpp,.o,$(SOURCES)))
 OBJDIR= obj
 SRCDIR= src
