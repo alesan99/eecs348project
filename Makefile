@@ -16,7 +16,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	
 clean:
 	rm -f $(OBJDIR)/*.o
-	rm -f $(SRCDIR)/$(BUILD_TARGET)
+	rm -f bin/$(BUILD_TARGET)
 setup:
 	mkdir -p bin/
 	mkdir -p obj/
