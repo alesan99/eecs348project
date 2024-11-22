@@ -1,27 +1,20 @@
 #include <iostream>
-#include "operators.h"
+#include <string>
+using namespace std;
+
+#include "state_handler.h"
 
 int main() {
-	// Example use case
-	int num1;
-	int num2;
-	std::string operation; {
-		using namespace std;
-		cout << "Enter number 1\n";
-		cin >> num1;
-		cout << "Enter operator\n";
-		cin >> operation;
-		cout << "Enter number 2\n";
-		cin >> num2;
-	}
-	// Unsure if I want to go down the * Operators are strings * route.
-	// This sort of operation would be needed each input, but it might be for the best?
-	//std::string operation = std::string_from(char_operator)
-	if (Operators::map.find(operation) != Operators::map.end()) {
-		std::cout << Operators::map[operation](num1, num2) << std::endl;
-	} else {
-		std::cout << "Invalid operator";
-		return -1;
+	StateHandler stateHandler;
+
+	// Start on input state
+	stateHandler.setState("input");
+
+	// Input loop
+	string input_str;
+	while (1) {
+		cin >> input_str;
+		stateHandler.input(input_str);
 	}
 	return 0;
 }
