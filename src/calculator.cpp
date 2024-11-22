@@ -1,7 +1,21 @@
 #include <iostream>
-#include "math.h"
+#include <string>
 using namespace std;
 
+#include "state_handler.h"
+
 int main() {
-	cout << "Area of a 5x5 square: " << area(5, 5) << "\n";
+	StateHandler stateHandler;
+
+	// Start on input state
+	stateHandler.setState("input");
+
+	// Input loop
+	string input_str;
+	while (1) {
+		cin >> input_str;
+		stateHandler.input(input_str);
+	}
+
+	return 0;
 }

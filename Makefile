@@ -1,16 +1,17 @@
 CC := g++
 CC_FLAGS := -g
 BUILD_TARGET := aee.out
-SOURCES := calculator.cpp math.cpp
+SOURCES := calculator.cpp state.cpp input_state.cpp result_state.cpp state_handler.cpp
+HEADERS := state.h input_state.h result_state.h state_handler.h
 OBJS=$(addprefix obj/,$(subst .cpp,.o,$(SOURCES)))
 OBJDIR= obj
 SRCDIR= src
-default: debug
+default: clean debug
 
 debug:	$(OBJS)
 	$(CC) $(CC_FLAGS) -o bin/$(BUILD_TARGET) $(OBJS)
 	
-$(OBJDIR)/%.o: src/%.cpp
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CC) $(CC_FLAGS) -o $@ -c $<
 	
 clean:
