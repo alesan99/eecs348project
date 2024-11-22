@@ -18,7 +18,7 @@ int main() {
 	// This sort of operation would be needed each input, but it might be for the best?
 	//std::string operation = std::string_from(char_operator)
 	if (Operators::map.find(operation) != Operators::map.end()) {
-		std::cout << Operators::map[operation](num1, num2);
+		std::cout << Operators::map[operation](num1, num2) << std::endl;
 	} else {
 		std::cout << "Invalid operator";
 		return -1;
