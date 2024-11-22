@@ -2,6 +2,7 @@
 #define OPERATORS_H
 #include <functional>
 #include <unordered_map>
+// Use string so we can add more complex operators if ever needed
 #include <string>
 
 /*
@@ -13,7 +14,7 @@
 
 namespace Operators {
     // Unordered map of operator functions
-    extern std::unordered_map<char, std::function<int(int, int)> > map;;
+    extern std::unordered_map<std::string, std::function<int(int, int)> > map;;
 
     // All supported operations.
     int add(int a, int b);

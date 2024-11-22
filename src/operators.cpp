@@ -1,12 +1,12 @@
 #include "operators.h"
 #include <cmath>
 
-std::unordered_map<char, std::function<int(int, int)> > Operators::map = {
-    {'+', Operators::add},
-    {'-', Operators::subtract},
-    {'*', Operators::multiply},
-    {'/', Operators::divide},
-    {'^', Operators::exponent},
+std::unordered_map<std::string, std::function<int(int, int)> > Operators::map = {
+    {"+", Operators::add},
+    {"-", Operators::subtract},
+    {"*", Operators::multiply},
+    {"/", Operators::divide},
+    {"^", Operators::exponent},
 };
 
 int Operators::add(int a, int b) {
