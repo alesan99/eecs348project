@@ -1,7 +1,7 @@
 CC := g++
-CC_FLAGS := -g
+CC_FLAGS := -g -std=c++11
 BUILD_TARGET := aee.out
-SOURCES := calculator.cpp math.cpp
+SOURCES := calculator.cpp math.cpp operators.cpp
 OBJS=$(addprefix obj/,$(subst .cpp,.o,$(SOURCES)))
 OBJDIR= obj
 SRCDIR= src
