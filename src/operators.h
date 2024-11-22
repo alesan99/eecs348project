@@ -1,7 +1,3 @@
-//
-// Created by disco on 11/21/2024.
-//
-
 #ifndef OPERATORS_H
 #define OPERATORS_H
 #include <functional>
@@ -16,10 +12,11 @@
 */
 
 namespace Operators {
-    int add(int a, int b);
-
-    // Unordered map of functions.
+    // Unordered map of operator functions
     extern std::unordered_map<char, std::function<int(int, int)> > map;;
+
+    // All supported operations.
+    int add(int a, int b);
 
     int subtract(int a, int b);
 

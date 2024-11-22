@@ -22,6 +22,7 @@ int Operators::multiply(int a, int b) {
 }
 
 int Operators::divide(int a, int b) {
+    // As long as they are both int we are fine
     return a / b;
 }
 
