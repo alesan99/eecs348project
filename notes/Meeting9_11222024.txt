@@ -1,0 +1,25 @@
+Math Olympiads Meeting Notes #
+Date + Time @ Location
+November 22, 5:00PM @ Online
+
+Members Present:
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Alejandro Sandoval
+Tyler Stuckey
+
+Members Absent:
+Aidan Atwood
+
+Primary Meeting Topic:
+Discuss code progress from previous initial implementation meeting
+
+Goal Progress from prior meeting:
+Merged two PRs, establishing a code base for further work to occur.
+
+Assignments and Goals:
+Continue work on topics discussed at the previous meeting. We will meet again after this upcoming break to ensure everyone is on the same page
+
+Meeting concluded at 
+5:30PM
