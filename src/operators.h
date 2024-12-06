@@ -16,6 +16,12 @@ namespace Operators {
     // Unordered map of operator functions
     extern std::unordered_map<std::string, std::function<int(int, int)> > map;;
 
+    // Helper functions
+
+    bool is_operator(std::string op);
+
+    int evaluate(std::string op, int a, int b);
+
     // All supported operations.
     int add(int a, int b);
 
