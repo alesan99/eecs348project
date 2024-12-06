@@ -16,6 +16,6 @@ int main() {
 		cin >> input_str;
 		stateHandler.input(input_str);
 	}
-
 	return 0;
 }
+
