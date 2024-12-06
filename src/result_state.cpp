@@ -1,7 +1,10 @@
 #include "result_state.h"
+
+#include <algorithm>
 #include <iostream>
 
-ResultState::ResultState() : State("result") {}
+ResultState::ResultState() : State("result") {
+}
 
 void ResultState::load(std::string result) {
 	// Display result
@@ -12,10 +15,13 @@ void ResultState::load(std::string result) {
 }
 
 void ResultState::input(std::string input) {
+	std::transform(input.begin(), input.end(), input.begin(), ::tolower);
 	// Decide what to do next
-	if (input == "Y") { // Input another expression
+	if (input == "y") {
+		// Input another expression
 		switchState("input");
-	} else if (input == "N") { // Exit program
+	} else if (input == "n") {
+		// Exit program
 		std::cout << "Exiting program..." << std::endl;
 		exit(0);
 	}
