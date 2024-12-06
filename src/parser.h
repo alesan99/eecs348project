@@ -1,11 +1,10 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <map>
 
 class Parser {
 public:
-
-    //Data structure which represents single character or operator
     struct Token {
         enum Type { Number, Op, Paren } type;
         std::string value;
@@ -22,8 +21,13 @@ public:
             delete right;
         }
     };
-    //return array of tokens
+
     std::vector<Token> tokenize(const std::string& input);
-    //return pointer to the Node
     Node* parseTokens(const std::vector<Token>& tokens);
+
+private:
+    const std::map<std::string, int> precedence = {
+        {"+", 1}, {"-", 1},
+        {"*", 2}, {"/", 2}
+    };
 };
