@@ -32,3 +32,70 @@ std::vector<Parser::Token> Parser::tokenize(const std::string& input) {
     
     return tokens;
 }
+
+Parser::Node* Parser::parseTokens(const std::vector<Token>& tokens) {
+    std::stack<Node*> output;
+    std::stack<Token> operators;
+    
+    for(const Token& token : tokens) {
+        switch(token.type) {
+            case Token::Number:
+                output.push(new Node(token.value));
+                break;
+                
+            case Token::Op: {
+                while(!operators.empty() && 
+                      operators.top().type == Token::Op &&
+                      precedence.at(operators.top().value) >= precedence.at(token.value)) {
+                    Token op = operators.top();
+                    operators.pop();
+                    
+                    Node* right = output.top(); output.pop();
+                    Node* left = output.top(); output.pop();
+                    
+                    Node* newNode = new Node(op.value);
+                    newNode->left = left;
+                    newNode->right = right;
+                    output.push(newNode);
+                }
+                operators.push(token);
+                break;
+            }
+                
+            case Token::Paren:
+                if(token.value == "(") {
+                    operators.push(token);
+                } else { // ")"
+                    while(!operators.empty() && operators.top().value != "(") {
+                        Token op = operators.top();
+                        operators.pop();
+                        
+                        Node* right = output.top(); output.pop();
+                        Node* left = output.top(); output.pop();
+                        
+                        Node* newNode = new Node(op.value);
+                        newNode->left = left;
+                        newNode->right = right;
+                        output.push(newNode);
+                    }
+                    if(!operators.empty()) operators.pop(); // pop "("
+                }
+                break;
+        }
+    }
+    
+    while(!operators.empty()) {
+        Token op = operators.top();
+        operators.pop();
+        
+        Node* right = output.top(); output.pop();
+        Node* left = output.top(); output.pop();
+        
+        Node* newNode = new Node(op.value);
+        newNode->left = left;
+        newNode->right = right;
+        output.push(newNode);
+    }
+    
+    return output.empty() ? nullptr : output.top();
+}
