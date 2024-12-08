@@ -1,0 +1,26 @@
+Math Olympiads Meeting Notes #10
+December 6 @ 5:00PM, Online
+
+Members Present:
+Aidan Atwood
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Alejandro Sandoval
+Tyler Stuckey
+
+Members Absent:
+None 
+
+Primary Meeting Topic:
+Discuss current code status
+
+Goal Progress from prior meeting:
+Went through and discussed everyones individual code so far, as well as where we want to go from here
+
+Assignments and Goals:
+Code pushed onto respective GitHub branch by Monday so we can have a integration and next steps meeting on Tuesday.
+
+
+Meeting concluded at 
+5:40PM
