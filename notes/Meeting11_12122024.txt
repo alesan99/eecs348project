@@ -1,0 +1,27 @@
+Math Olympiads Meeting Notes #11
+Date + Time @ Location
+December 10 3:20PM @ LEEP2 2320
+
+Members Present:
+Aidan Atwood
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Alejandro Sandoval
+
+Members Absent:
+Tyler Stuckey
+
+Primary Meeting Topic:
+Coding integration, as well as overall state of manual and test cases
+
+Assignments and Goals:
+Joel - finalize the execute functoin
+Aidan B - Integrate Liam's input function within the current input handler
+Aidan A - Look over test cases and add to manual
+Liam - Manual 
+Alejandro - Test cases 
+Tyler - Test cases
+
+Meeting concluded at
+3:55PM
