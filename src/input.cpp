@@ -35,7 +35,10 @@ bool inputValid(const std::string &input) {
     std::string validOperators = "+-*/^";
 
     bool expectOperand = true; // Track if the next element is expected to be an operand
-
+    // Check if the input has anything
+    if (input.empty()) {
+        throw std::invalid_argument("Empty input string");
+    }
     for (char ch: input) {
         if (std::isdigit(ch)) {
             expectOperand = false;
