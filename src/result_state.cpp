@@ -8,14 +8,14 @@ ResultState::ResultState() : State("result") {
 
 void ResultState::load(std::string result) {
 	// Display result
-	std::cout << "Result: " << result << std::endl;
+	std::cout << result << std::endl;
 
 	// Prompt user
-	std::cout << "Do you want to input another expression? (Y/N):" << std::endl;
+	std::cout << "Do you want to input another expression? (Y/n):" << std::endl;
 }
 
 void ResultState::input(std::string input) {
-	std::transform(input.begin(), input.end(), input.begin(), ::tolower);
+	std::transform(input.begin(), input.end(), input.begin(), ::tolower); // case-insensitive
 	// Decide what to do next
 	if (input == "y") {
 		// Input another expression

@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include <vector>
 
+#include "execute.h"
+
 /**
  * @brief Checks open parenthesis matches closing parenthesis
  * @param input The trimmed input string
@@ -99,12 +101,10 @@ int execute(std::vector<int> &values, std::vector<char> &operators) {
 
 /**
  * @brief Initiates new expression input, called by calculator main class
+ * @param input The input string
+ * 
  */
-void newInput() {
-    std::string input;
-    std::cout << "Enter an expression: ";
-    std::getline(std::cin, input);
-
+std::string newInput(std::string input) {
     // Remove spaces from input
     std::string trimmedInput;
     for (int i = 0; i < input.length(); i++) {
@@ -136,9 +136,15 @@ void newInput() {
 
         // Call the execute function
         // TODO: Call the execution step
-        // execute(values, operators);
+        int result = execute(values, operators);
+
+        // turn result into string
+        std::string resultString = "Result: " + std::to_string(result);
+        return resultString;
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        std::string errorMessage = "Error: " + std::string(e.what());
+        // std::cerr << errorMessage << std::endl;
+        return errorMessage;
     }
 }
 

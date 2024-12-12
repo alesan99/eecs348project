@@ -1,6 +1,8 @@
 #include "input_state.h"
 #include <iostream>
 
+#include "input.h"
+
 InputState::InputState() : State("input") {}
 
 void InputState::load(std::string arg) {
@@ -10,10 +12,9 @@ void InputState::load(std::string arg) {
 void InputState::input(std::string input) {
 	expression = input;
 
-	// TODO
-	// 1. PARSE
-	// 2. EVALUATE
+	// PARSE and EVALUATE
+	std::string result = newInput(expression);
 
 	// Display result
-	switchState("result", expression);
+	switchState("result", result);
 }
