@@ -35,5 +35,8 @@ void ResultState::input(std::string input) {
 		// Exit program
 		std::cout << "Exiting program..." << std::endl;
 		exit(0);
+	} else {
+		// Invalid input
+		std::cout << "Invalid input. Please enter Y or n." << std::endl;
 	}
 }
