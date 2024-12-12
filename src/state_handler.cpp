@@ -1,7 +1,8 @@
 #include "state_handler.h"
 #include <stdexcept>
 
-StateHandler::StateHandler() : currentState(nullptr) {}
+StateHandler::StateHandler() : currentState(nullptr) {
+}
 
 // Set the current state
 void StateHandler::setState(std::string stateName, std::string arg) {
@@ -16,7 +17,6 @@ void StateHandler::setState(std::string stateName, std::string arg) {
 	} else {
 		throw std::invalid_argument("Unknown state: " + stateName);
 	}
-
 	currentState->load(arg);
 }
 

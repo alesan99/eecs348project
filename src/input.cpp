@@ -104,7 +104,7 @@ int execute(std::vector<int> &values, std::vector<char> &operators) {
  * @param input The input string
  * 
  */
-std::string newInput(std::string input) {
+std::string newInput(std::string input, bool testFlag) {
     // Remove spaces from input
     std::string trimmedInput;
     for (int i = 0; i < input.length(); i++) {
@@ -126,6 +126,7 @@ std::string newInput(std::string input) {
         separate(trimmedInput, values, operators);
 
         // Print values and operators, for testing purposes only
+        /*
         std::cout << "Values: ";
         for (int value: values) std::cout << value << " ";
         std::cout << std::endl;
@@ -133,12 +134,15 @@ std::string newInput(std::string input) {
         std::cout << "Operators: ";
         for (char i: operators) std::cout << i << " ";
         std::cout << std::endl;
-
+        */
         // Call the execute function
         // TODO: Call the execution step
         int result = execute(values, operators);
 
         // turn result into string
+        if (testFlag) {
+            return std::to_string(result);
+        }
         std::string resultString = "Result: " + std::to_string(result);
         return resultString;
     } catch (const std::exception &e) {
