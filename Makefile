@@ -22,3 +22,5 @@ setup:
 	mkdir -p obj/
 test: setup debug
 	bash ./run_tests.sh
+release: $(OBJS)
+	$(CC) $(CC_FLAGS) -Wall -O2 -o bin/$(BUILD_TARGET) $(OBJS)
