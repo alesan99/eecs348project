@@ -7,8 +7,7 @@ ResultState::ResultState() : State("result") {
 }
 
 void ResultState::load(std::string result) {
-	// Check for -t flag (tests)
-	if (result.length() > 3 && result.substr(0, 3) == "-t ") {
+	if (result.length() >= 3 && result.substr(0, 3) == "-t ") {
 		result.erase(0, 3);
 		std::cout << result << std::endl;
 		return;

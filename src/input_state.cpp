@@ -18,7 +18,7 @@ void InputState::input(std::string input) {
 	expression = input;
 	bool test = false;
 	std::string result = "";
-	if (expression.length() > 3 && expression.substr(0, 3) == "-t ") {
+	if (expression.length() >= 3 && expression.substr(0, 3) == "-t ") {
 		test = true;
 		expression.erase(0, 3);
 		result += "-t ";

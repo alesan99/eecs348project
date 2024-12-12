@@ -1,4 +1,4 @@
-name: Run Tests
+name: Tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "dev", "main" ]
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 

@@ -1,4 +1,4 @@
-name: Makefile CI
+name: Compilation
 
 on:
   push:
@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-      
-    - name: Run setup
-      run: make setup
+      - uses: actions/checkout@v4
 
-    - name: Run distcheck
-      run: make debug
+      - name: Run setup
+        run: make setup
+
+      - name: Run release
+        run: make release
