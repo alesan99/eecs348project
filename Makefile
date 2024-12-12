@@ -21,4 +21,4 @@ setup:
 	mkdir -p bin/
 	mkdir -p obj/
 test: setup debug
-	./run_tests.sh
+	bash ./run_tests.sh
