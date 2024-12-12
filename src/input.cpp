@@ -139,11 +139,12 @@ std::string newInput(std::string input) {
         int result = execute(values, operators);
 
         // turn result into string
-        std::string resultString = std::to_string(result);
+        std::string resultString = "Result: " + std::to_string(result);
         return resultString;
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return "Error";
+        std::string errorMessage = "Error: " + std::string(e.what());
+        // std::cerr << errorMessage << std::endl;
+        return errorMessage;
     }
 }
 

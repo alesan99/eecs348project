@@ -8,7 +8,7 @@ ResultState::ResultState() : State("result") {
 
 void ResultState::load(std::string result) {
 	// Display result
-	std::cout << "Result: " << result << std::endl;
+	std::cout << result << std::endl;
 
 	// Prompt user
 	std::cout << "Do you want to input another expression? (Y/n):" << std::endl;
