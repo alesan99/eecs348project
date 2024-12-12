@@ -115,6 +115,13 @@ int execute(std::vector<int> &values, std::vector<char> &operators)
                 case 2:
                     return execute(prevValues,prevOperators) * execute(nextValues,nextOperators);
                 case 3:
+                    int firstValue = execute(prevValues,prevOperators);
+                    int secondValue = execute(nextValues,nextOperators)
+                    if (secondValue == 0)
+                    {
+                        throw std::invalid_argument("Division by zero.");
+                    }
+
                     return execute(prevValues,prevOperators) / execute(nextValues,nextOperators);
                 case 4:
                     return  pow(execute(prevValues,prevOperators), execute(nextValues,nextOperators)) ;
