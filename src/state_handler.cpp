@@ -9,7 +9,7 @@ void StateHandler::setState(std::string stateName, std::string arg) {
 		currentState->leave();
 	}
 
-		if (stateName == inputState.getStateName()) {
+	if (stateName == inputState.getStateName()) {
 		currentState = &inputState;
 	} else if (stateName == resultState.getStateName()) {
 		currentState = &resultState;
