@@ -81,7 +81,7 @@ void separate(const std::string &input, std::vector<int> &values, std::vector<ch
 
                 numBuffer.clear();
             }
-            if (std::string("+-*/^").find(ch) != std::string::npos) {
+            if (std::string("+-*/^()").find(ch) != std::string::npos) {
                 operators.push_back(ch);
             }
         }

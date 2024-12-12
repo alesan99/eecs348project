@@ -12,8 +12,8 @@ int main() {
 
 	// Input loop
 	string input_str;
-	while (1) {
-		cin >> input_str;
+	while (true) {
+		getline(cin, input_str);
 		stateHandler.input(input_str);
 	}
 	return 0;
