@@ -116,7 +116,7 @@ int execute(std::vector<int> &values, std::vector<char> &operators)
                     return execute(prevValues,prevOperators) * execute(nextValues,nextOperators);
                 case 3:
                     int firstValue = execute(prevValues,prevOperators);
-                    int secondValue = execute(nextValues,nextOperators)
+                    int secondValue = execute(nextValues,nextOperators);
                     if (secondValue == 0)
                     {
                         throw std::invalid_argument("Division by zero.");
