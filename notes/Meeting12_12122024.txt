@@ -1,0 +1,30 @@
+Math Olympiads Meeting Notes #12
+December 12 5:00PM Online 
+
+Members Present:
+Aidan Atwood
+Aidan Bergeman
+Joel Harrison
+Liam Kinghouser
+Alejandro Sandoval
+Tyler Stuckey
+
+Members Absent:
+N/a
+
+Primary Meeting Topic:
+Finalize project, prepare for final submission.
+
+Assignments and Goals:
+Liam: Brackets to be changed to parentheses  
+Aidan A: Checking normal functionality  
+Aidan B: Check for empty input + Test document
+Tyler: Fix implied multiplication
+Joel: Order of operations
+Alejandro: Look over user manual
+
+
+
+Meeting concluded at 5:30PM
+
+n.b. Peer Evaluations Reminder
