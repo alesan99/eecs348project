@@ -48,13 +48,13 @@ run_test_case "[2+{2+(2+2)}]" "8"
 run_test_case "1/0" "Error: Division by zero"
 run_test_case "+" "Error: Operator in invalid position"
 run_test_case "1+" "Error: Expression ends with an operator"
-run_test_case "(1+1)(1+1)" "Error: Operator in invalid position"
+run_test_case "(1+1)(1+1)" "Error: Invalid expression"
 # Bug with test code.
 # TODO: Fix test input being broken if no argument is given.
 run_test_case "" "Error: Empty input string"
 run_test_case "a" "Error: Invalid character in input"
-run_test_case "(1+3))" "Error: Empty parentheses or invalid use of ')'"
-run_test_case "()" "Error: Empty parentheses or invalid use of ')'"
+run_test_case "(1+3))" "Error: Invalid expression"
+run_test_case "()" "Error: Invalid parentheses"
 
 # PRINT THE RESULST
 echo ""

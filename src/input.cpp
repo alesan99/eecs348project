@@ -16,15 +16,21 @@ bool checkParenthesis(std::string input) {
     for (int i = 0; i < input.length(); i++) {
         char ch = input[i];
 
-        if (ch == '(') balance++;
-
-        else if (ch == ')') balance--;
-
+        if (ch == '(') {
+            if (i >= 1) {
+                if (std::isdigit(input[i - 1]) || input[i - 1] == ')') {
+                    return false;
+                }
+            }
+            balance++;
+        } else if (ch == ')') {
+            balance--;
+        }
         if (balance < 0) return false; // Closing parenthesis without matching opening
     }
-
-    return balance == 0; // True if all parentheses are balanced
+    return balance == 0;
 }
+
 
 /**
  * @brief Checks validity of input
@@ -52,7 +58,7 @@ bool inputValid(const std::string &input) {
             expectOperand = true; // After '(' we expect an operand
         } else if (ch == ')') {
             if (expectOperand) {
-                throw std::invalid_argument("Empty parentheses or invalid use of ')'");
+                throw std::invalid_argument("Invalid parentheses");
             }
         } else {
             throw std::invalid_argument("Invalid character in input");
@@ -77,6 +83,21 @@ void separate(const std::string &input, std::vector<int> &values, std::vector<ch
         char ch = input[i];
 
         if (std::isdigit(ch)) {
+            // check if negative
+            if (numBuffer.empty()) {
+                // Might work to check fi negative , although will throw an exception before it gets here.
+                if (i >= 2) {
+                    if ((input[i - 1] == '-') && (std::string("+-*/^()").find(input[i - 2]) != std::string::npos)) {
+                        operators.pop_back();
+                        numBuffer += '-';
+                    }
+                } else if (i == 1) {
+                    if (input[0] == '-') {
+                        operators.pop_back();
+                        numBuffer += '-';
+                    }
+                }
+            }
             numBuffer += ch;
         } else {
             if (!numBuffer.empty()) {
@@ -105,7 +126,7 @@ int execute(std::vector<int> &values, std::vector<char> &operators) {
 /**
  * @brief Initiates new expression input, called by calculator main class
  * @param input The input string
- * 
+ *
  */
 std::string newInput(std::string input, bool testFlag) {
     // Remove spaces from input
@@ -115,7 +136,7 @@ std::string newInput(std::string input, bool testFlag) {
         if (!std::isspace(ch)) {
             if (ch == '{' || ch == '[') ch = '(';
             else if (ch == '}' || ch == ']') ch = ')';
-            
+
             trimmedInput += ch;
         }
     }
