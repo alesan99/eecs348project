@@ -41,6 +41,7 @@ bool inputValid(const std::string &input) {
     std::string validOperators = "+-*/^";
 
     bool expectOperand = true; // Track if the next element is expected to be an operand
+    bool firstCharInGroup = true; // Track if the first character in a group is an operand 
     // Check if the input has anything
     if (input.empty()) {
         throw std::invalid_argument("Empty input string");
@@ -48,9 +49,14 @@ bool inputValid(const std::string &input) {
     for (char ch: input) {
         if (std::isdigit(ch)) {
             expectOperand = false;
+            firstCharInGroup = false;
         } else if (validOperators.find(ch) != std::string::npos) {
             if (expectOperand) {
-                throw std::invalid_argument("Operator in invalid position");
+                if (ch == '-' && firstCharInGroup) { // allow negative numbers
+                    firstCharInGroup = false;
+                } else {
+                    throw std::invalid_argument("Operator in invalid position");
+                }
             }
 
             expectOperand = true;
@@ -60,6 +66,7 @@ bool inputValid(const std::string &input) {
                 throw std::invalid_argument("Invalid expression");
             }
             expectOperand = true; // After '(' we expect an operand
+            firstCharInGroup = true;
         } else if (ch == ')') {
             if (expectOperand) {
                 throw std::invalid_argument("Invalid parentheses");
