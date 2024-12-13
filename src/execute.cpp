@@ -105,26 +105,29 @@ int execute(std::vector<int> &values, std::vector<char> &operators)
             auto nextValues = std::vector<int>(values.begin() + valueSplitConversion + 1, values.end());
             auto nextOperators = std::vector<char>(operators.begin() + split + 1, operators.end());
 
+            int firstValue = execute(prevValues,prevOperators);
+            int secondValue = execute(nextValues,nextOperators);
+
 
             switch (i)
             {
+
                 case 0:
-                    return execute(prevValues,prevOperators) + execute(nextValues,nextOperators);
+                    return firstValue + secondValue;
                 case 1:
-                    return execute(prevValues,prevOperators) - execute(nextValues,nextOperators);
+                    return firstValue - secondValue;
                 case 2:
-                    return execute(prevValues,prevOperators) * execute(nextValues,nextOperators);
+                    return firstValue * secondValue;
                 case 3:
-                    int firstValue = execute(prevValues,prevOperators);
-                    int secondValue = execute(nextValues,nextOperators);
+
                     if (secondValue == 0)
                     {
                         throw std::invalid_argument("Division by zero.");
                     }
+                    return firstValue / secondValue;
 
-                    return execute(prevValues,prevOperators) / execute(nextValues,nextOperators);
                 case 4:
-                    return  pow(execute(prevValues,prevOperators), execute(nextValues,nextOperators)) ;
+                    return  pow(firstValue, secondValue) ;
             }
         }
     }
@@ -137,7 +140,7 @@ int execute(std::vector<int> &values, std::vector<char> &operators)
 
 
 
-/*
+
 int main()
 {
     std::vector<int> values({10,5,2});
@@ -146,4 +149,3 @@ int main()
     printf("%d",execute(values, operators));
 }
 
- */
