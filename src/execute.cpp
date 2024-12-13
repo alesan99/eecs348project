@@ -122,7 +122,7 @@ int execute(std::vector<int> &values, std::vector<char> &operators)
 
                     if (secondValue == 0)
                     {
-                        throw std::invalid_argument("Division by zero.");
+                        throw std::invalid_argument("Division by zero");
                     }
                     return firstValue / secondValue;
 
@@ -140,7 +140,7 @@ int execute(std::vector<int> &values, std::vector<char> &operators)
 
 
 
-
+/*
 int main()
 {
     std::vector<int> values({10,5,2});
@@ -148,4 +148,4 @@ int main()
 
     printf("%d",execute(values, operators));
 }
-
+*/
