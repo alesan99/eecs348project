@@ -140,7 +140,7 @@ int execute(std::vector<int> &values, std::vector<char> &operators)
 
 
 
-
+/*
 int main()
 {
     std::vector<int> values({10,5,2});
@@ -148,4 +148,4 @@ int main()
 
     printf("%d",execute(values, operators));
 }
-
+*/
