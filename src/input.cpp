@@ -55,6 +55,10 @@ bool inputValid(const std::string &input) {
 
             expectOperand = true;
         } else if (ch == '(') {
+            // avoid implied multiplication
+            if (!expectOperand) {
+                throw std::invalid_argument("Invalid expression");
+            }
             expectOperand = true; // After '(' we expect an operand
         } else if (ch == ')') {
             if (expectOperand) {
