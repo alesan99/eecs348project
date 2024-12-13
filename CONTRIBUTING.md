@@ -1,7 +1,7 @@
 # Contributing
 1. Please create a branch for your changes.
 
-2. Once you have committed the changes to your personal branch, head back to the GitHub website to create a pull request. You can also click [here](/alesan99/eecs348project/compare/) to be taken directly to compare branches. Ensure you have the base  set to dev, and the comparison target as your new branch. Hit the green **Create Pull Request** button to enter info about your pull request. Please include the overall objective of your new code, and any potential issues you have identified with it. Once you have written the description, hit the **Create Pull Request** button one final time to complete the process.
+2. Once you have committed the changes to your personal branch, head back to the GitHub website to create a pull request. You can also click [here](https://github.com/alesan99/eecs348project/compare/) to be taken directly to compare branches. Ensure you have the base  set to dev, and the comparison target as your new branch. Hit the green **Create Pull Request** button to enter info about your pull request. Please include the overall objective of your new code, and any potential issues you have identified with it. Once you have written the description, hit the **Create Pull Request** button one final time to complete the process.
 
 3. In a timely manner, we will go over the pull requests as a team and discuss the changes within each PR. Please do not create and merge your own pull request. 
 

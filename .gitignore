@@ -1,3 +1,6 @@
 *.o
 *.out
+bin/
 .vs/
+.idea/
+.vscode/

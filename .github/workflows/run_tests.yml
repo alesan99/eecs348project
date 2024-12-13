@@ -1,4 +1,4 @@
-name: Compilation
+name: Tests
 
 on:
   push:
@@ -7,15 +7,12 @@ on:
     branches: [ "dev", "main" ]
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run setup
-        run: make setup
-
-      - name: Run release
-        run: make release
+      - name: Run tests
+        run: make test
