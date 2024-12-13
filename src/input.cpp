@@ -113,6 +113,9 @@ std::string newInput(std::string input, bool testFlag) {
     for (int i = 0; i < input.length(); i++) {
         char ch = input[i];
         if (!std::isspace(ch)) {
+            if (ch == '{' || ch == '[') ch = '(';
+            else if (ch == '}' || ch == ']') ch = ')';
+            
             trimmedInput += ch;
         }
     }
